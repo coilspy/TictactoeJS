@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css?family=Asap');
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: Asap, sans-serif;
+}
+
+body {
+    background-color: #24272E;
+}
+
+header {
+    background : white;
+    padding : 20px;
+}
+
+header > h1 {
+    color: #24272E;
+    text-align: center;
+}
+
+.scoreboard {
+    border: 3px solid white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 20px auto;
+    width: 200px;
+    color: white;
+    font-size: 46px;
+    position: relative;
+}
+
+.badge {
+    
+    color:white;
+    font-size: 14px;
+    padding: 2px 8px;
+}
+#user-label {
+    background: #64b3f4;
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+#computer-label {
+    background: #E2584D;
+    position: absolute;
+    top: 30px;
+    right: -35px;
+}
+
+.result {
+    font-size: 40px;
+    color: white;
+}
+.result > p {
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+}
+.grid-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.grid {
+    overflow: hidden;
+    display: grid;
+    margin: 20px auto;
+    grid-gap: 2px;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+.cell {
+    font-size: 72px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border: 2px solid gray;
+    padding:5px;
+    background-color: white;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.cell:hover{
+    cursor: pointer;   
+    background: #999999;
+}
+
+#action-message {
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 36px;
+    font-weight: bold;
+    color:white;
+}
+
+
+
