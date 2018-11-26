@@ -13,15 +13,40 @@ const cell5_div = document.getElementById("5");
 const cell6_div = document.getElementById("6");
 const cell7_div = document.getElementById("7");
 const cell8_div = document.getElementById("8");
-
+var cells = Array(cell0_div, cell1_div,cell2_div,cell3_div,cell4_div,cell5_div,cell6_div,cell7_div,cell8_div);
+Object.seal(cells);
 var cellValues = Array(0,0,0,0,0,0,0,0,0);
 Object.seal(cellValues);
+var gameEnded = false;
+var playerMoved = false;
 
-cell0_div.addEventListener("click", checkCell(0));
 
 
-function checkCell(){
-    let number = arguments[0];
-    var cell = this;
+function checkCell(number){
+    if(cellValues[number] === 0)
+    {
+        cells[number].style.color = "#64b3f4";
+        cells[number].textContent = "X";
+        cellValues[number] = 1;
+        playerMoved = true;
+    }
+    else {
+        console.log("cell is occupied");
+    }
     
+}
+
+
+while(!gameEnded){
+    while(!playerMoved){
+    }
+    playerMoved = false;
+    computerMove();
+    checkWinner();
+}
+function computerMove(){
+
+}
+function checkWinner(){
+
 }
